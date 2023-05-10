@@ -6,6 +6,11 @@ export class Card extends Component {
     static template = "owl_playground.Card";
     static props = {
         title: String,
-        content: String,
+        slots: {
+            type: Object,
+            shape: {
+                default: true
+            },
+        }
     };
 }
