@@ -2,13 +2,19 @@
 <templates xml:space="preserve">
 
     <t t-name="awesome_dashboard.clientaction" owl="1">
-        <Layout display="display">
-            <t t-set-slot="control-panel-bottom-left">
-                <button class="btn btn-primary" t-on-click="openCustomerView"> Customers </button>
-                <button class="btn btn-primary" t-on-click="openLeads"> Leads </button>
-            </t>
-            some content
-        </Layout>    
+        <div class="h-100" style="background-color: #aaaaaa;">
+            <Layout display="display">
+                <t t-set-slot="control-panel-bottom-left">
+                    <button class="btn btn-primary" t-on-click="openCustomerView"> Customers </button>
+                    <button class="btn btn-primary" t-on-click="openLeads"> Leads </button>
+                </t>
+                <div class="d-flex flex-nowrap">
+                    <DashboardItem>
+                        some content
+                    </DashboardItem>
+                </div>
+            </Layout>    
+        </div>
     </t>
 
 </templates>
